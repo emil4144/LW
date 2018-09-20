@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <div class="reg-frm-cont">
+    <div class="heading"><h3>Education-only thing to discover world</h3></div>
+    <div class="reg-cont">
+      <form (submit)="join()">
+        <div class="form-group">
+          <mat-form-field class="input-cont"   >
+              <mat-label class="inpt">First name</mat-label>
+            <input matInput  type="text" [formControl]="fName" [errorStateMatcher]="matcher" class="inpt" autocomplete="off" >
+            <mat-error *ngIf="fName.hasError('required')">
+                First name is <strong>required</strong>
+            </mat-error>    
+          </mat-form-field>
+          <mat-form-field class="input-cont" >
+              <mat-label>Last name</mat-label>
+            <input matInput  type="text" [formControl]="lName" [errorStateMatcher]="matcher" class="inpt" autocomplete="off">
+            <mat-error *ngIf="lName.hasError('required')">
+                Last name is <strong>required</strong>
+            </mat-error>    
+          </mat-form-field>
+          <mat-form-field class="input-cont" >
+              <mat-label>Email</mat-label>
+            <input matInput  type="email" [formControl]="email" [errorStateMatcher]="matcher" class="inpt" autocomplete="off" >
+            <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input-cont" >
+              <mat-label>Password(8 or mor characters)</mat-label>
+            <input matInput  [type]="hide ? 'password' : 'text'" [formControl]="password" [errorStateMatcher]="matcher" class="inpt">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>    
+            <mat-error *ngIf="password.hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>    
+            <mat-error *ngIf="password.hasError('minlength') && !password.hasError('required')">
+                Password mast be at list 8 character
+            </mat-error> 
+          </mat-form-field>
+          <mat-form-field class="input-cont" >
+              <mat-label>Reapeat password</mat-label>
+            <input matInput  [type]="hide ? 'password' : 'text'" [formControl]="rpassword" [errorStateMatcher]="matcher" class="inpt">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <mat-error *ngIf="rpassword.hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>    
+            <mat-error *ngIf="rpassword.hasError('cpass') && !rpassword.hasError('required')">
+                Passwords dont match
+            </mat-error> 
+          </mat-form-field>   
+          <button mat-button type="submit" class="reg-button" >Join to LW</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

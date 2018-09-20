@@ -1,0 +1,31 @@
+
+.reg-frm-cont{
+    width:400px;
+    border:1px solid rgba(67, 70, 73,0.5);  
+    text-align: center;
+    background-color: rgba(250, 248, 250,0.9);        
+}
+.reg-cont{
+    width:calc(100%-24px);
+    padding:5px 24px 10px;    
+    background-color: rgba(237, 240, 243,0.95);
+    border-top:1px solid rgba(67, 70, 73, 0.5);      
+}
+.input-cont{
+    display:block;
+    margin:10px 0;    
+}
+
+.reg-button{    
+    display: block;
+    background-color: #0073b1;
+    color:white;
+    margin:auto;
+    width:100%   
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    background-image: url("../../assets/back.jpg");
+   padding: 25px;   
+}
