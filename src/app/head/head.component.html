@@ -1,1 +1,18 @@
-<nav class="navbar"></nav>
+<nav class="navbar">
+    
+        
+
+
+    <div *ngIf="hurl=='/forgot' || hurl=='/login'">           
+        <a routerLink="/" class="logoh"> <div ></div></a>   
+        <a mat-stroked-button   class="join-button" routerLink="/" >Join now</a>
+        <a mat-button   class="signin-button" routerLink="/login" >Sign in</a>
+    </div>
+    <div *ngIf="hurl=='/'">           
+        <a routerLink="/" class="logoh"> <div ></div></a>    
+        <a mat-button   class="signin-button1" routerLink="/forgot" >Forgot password?</a>  
+    </div>
+
+
+
+</nav>

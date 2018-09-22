@@ -1,6 +1,9 @@
 <div class="wrapper">
   <div class="reg-frm-cont">
-    <div class="heading"><h3>Education-only thing to discover world</h3></div>
+    <div class="heading">
+        <p class="p1">Education-only way to discover world<p>
+        <p class="p2">Register for free</p>
+    </div>
     <div class="reg-cont">
       <form (submit)="join()">
         <div class="form-group">
@@ -49,7 +52,8 @@
             <mat-error *ngIf="rpassword.hasError('cpass') && !rpassword.hasError('required')">
                 Passwords dont match
             </mat-error> 
-          </mat-form-field>   
+          </mat-form-field>  
+          <p class="p3">By clicking Join to LW, you agree to the LW User Agreement, Privacy Policy, and Cookie Policy.</p> 
           <button mat-button type="submit" class="reg-button" >Join to LW</button>
         </div>
       </form>

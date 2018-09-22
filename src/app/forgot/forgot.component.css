@@ -1,0 +1,31 @@
+.cancel-button{
+    padding:0 50px;
+    margin:5px 5px 
+}
+.reset-button{        
+    background-color: #0073b1;
+    color:white;
+    padding:0 32.03px;
+    margin:5px  5px 
+}
+.frm-container{
+max-width:450px;
+margin: auto;
+border:1px solid black;
+border-radius: 2px;
+padding:24px;
+background-color: rgb(250,250,250)
+}
+.input-container{
+    display:block;
+}
+.button-container{    
+    margin:40px 20px 
+}
+.wrapper{
+    padding-top:20px;
+    background-color: aliceblue; 
+    min-width: 320px;
+    min-height: 461px;
+    box-sizing: border-box 
+}

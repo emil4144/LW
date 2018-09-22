@@ -1,0 +1,52 @@
+.wrapper{
+    padding-top:20px;
+    background-image: url("../../assets/back.jpg");
+    min-width: 320px;
+    min-height: 500px;  
+    box-sizing: border-box
+}
+.frm-container{
+    max-width:450px;
+    margin: auto;
+    border:1px solid black;
+    border-radius: 2px;
+    padding:24px;
+    background-color: rgba(250,250,250,0.9)
+    }
+    .login-button{        
+        background-color: #0073b1;
+        color:white;
+        display: block;
+        margin:5px  auto;
+        width:100%
+    }
+    .input-cont{
+        display: block;
+        margin:15px 5px
+        
+    }
+
+    .logo{
+        border:1px solid black;
+        height:70px;
+        margin:15px 5px
+
+    }
+    .link-cont{
+        display: flex;       
+        flex-direction: column;
+        align-items: center;  
+        margin-top:20px;
+        font-size: 15px
+    }
+    span{
+        margin:10px;
+        
+    }
+    a{
+        color: rgb(100,100,100);
+        text-decoration: none
+    }
+    a:hover{
+        text-decoration: underline
+    }

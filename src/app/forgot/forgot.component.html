@@ -1,0 +1,21 @@
+<div class="wrapper" style.height.px={{height-144}} >
+  <div class="frm-container">
+    <p *ngIf="errmsg" style="text-align: center; color:red"><mat-icon matSuffix style="vertical-align: -6px">{{ "cancel"}}</mat-icon>  Account doesn't found for {{"a"}}</p>
+    <h1 style="text-align: center">Let's find your account</h1>
+    <hr>
+    <h4>Please enter your email or phone</h4>
+    <form >
+        <mat-form-field class="input-container" appearance="outline" >
+            <mat-label class="inpt">Email or phone</mat-label>
+          <input matInput  type="text" [formControl]="email"  class="inpt" autocomplete="off" [errorStateMatcher]="matcher1">
+          <mat-error *ngIf="email.hasError('pevalid') || email.hasError('required')">
+              Please enter your email or phone
+          </mat-error>    
+        </mat-form-field>
+        <div class="button-container">
+          <a mat-stroked-button color="primary"  class="cancel-button" routerLink="/login" >Cancel</a>
+          <button mat-button type="submit" class="reset-button" >Find account</button>
+      </div>
+    </form>
+  </div>
+</div>

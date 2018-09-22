@@ -4,3 +4,29 @@
   background-color: rgb(40, 62, 74);
  
 }
+
+.logoh{
+  display:inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: chartreuse;
+  width:100px;
+  height:48px;
+  margin: 10px 10px 0 
+}
+
+.join-button{
+  color: white;
+  float:right;
+  margin: 17px 50px 0 0;
+}
+.signin-button{
+  color:white;
+  float:right ;
+  margin: 17px 10px 0 0;
+}
+
+.signin-button1{
+  color:white;
+  float:right ;
+  margin: 17px 100px 0 0;
+}

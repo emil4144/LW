@@ -18,6 +18,15 @@ function comparepass(comparevalue:FormControl):ValidatorFn{
 
 }
 
+export function emailValidator(control: AbstractControl) {  
+  let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let email= re.test(String(control.value).toLowerCase());    
+  if (email==false ) {  
+    return { email: true };
+  }
+  return null;
+}
+
 @Component({
   selector: 'lw-home',
   templateUrl: './home.component.html',
@@ -28,7 +37,7 @@ export class HomeComponent implements OnInit {
   matcher = new MyErrorStateMatcher()
   public email = new FormControl('', [
     Validators.required,
-    Validators.email,
+    emailValidator,
     
   ]);
   public password = new FormControl('', [

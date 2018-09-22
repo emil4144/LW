@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Component, DoCheck } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ActivatedRoute, Router,  } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'lw-head',
   templateUrl: './head.component.html',
   styleUrls: ['./head.component.css']
 })
-export class HeadComponent {
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-    
-  constructor(private breakpointObserver: BreakpointObserver) {}
+export class HeadComponent implements DoCheck {  
   
+  public hurl
+  constructor(private route:ActivatedRoute, private router:Router) {
+    
   }
+  ngDoCheck(){
+   this.hurl= this.router.url
+  }
+  
+}

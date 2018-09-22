@@ -1,0 +1,33 @@
+<div class="wrapper" style.height.px={{height-144}}>
+  <div class="frm-container">
+    <div class="logo"><h1 style="text-align: center">LW</h1></div>
+    <form >
+      <mat-form-field class="input-cont" >
+          <mat-label>Email</mat-label>
+        <input matInput  type="email" [formControl]="email" [errorStateMatcher]="matcher" class="inpt" autocomplete="off" >
+        <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+            Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+            Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="input-cont" >
+          <mat-label>Password(8 or mor characters)</mat-label>
+        <input matInput  [type]="hide ? 'password' : 'text'" [formControl]="password" [errorStateMatcher]="matcher" class="inpt">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>    
+        <mat-error *ngIf="password.hasError('required')">
+              Password is <strong>required</strong>
+        </mat-error>    
+        <mat-error *ngIf="password.hasError('minlength') && !password.hasError('required')">
+            Password mast be at list 8 character
+        </mat-error> 
+      </mat-form-field>
+      <button mat-button type="submit" class="login-button" >Sign in</button>
+    </form>
+    <div class="link-cont" >
+      <a routerLink="/forgot" >Forgot password?</a>
+      <span>Not a member? <a routerLink="/">Join now</a></span>
+    </div>
+  </div>
+</div>
